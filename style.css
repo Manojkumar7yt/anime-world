@@ -61,7 +61,7 @@ nav a:hover {
     background:
         linear-gradient(rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.9)),
-        url("images/banner.jpg");
+        url("banner.jpg");
 
     background-size: cover;
     background-position: center;
@@ -1443,7 +1443,7 @@ body.light-mode .theme-toggle:hover {
     background:
         linear-gradient(rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.9)),
-        url("images/banner.jpg");
+        url("banner.jpg");
 
     background-size: cover;
     background-position: center;
