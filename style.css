@@ -1,0 +1,1852 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0f;
+    color: white;
+}
+
+/* ================= NAVBAR PREMIUM ANIMATION ================= */
+
+.nav-links a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Hover color */
+nav a:hover {
+    color: #ff3b6b;
+}
+
+/* Animated underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ff3b6b;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+/* Expand underline */
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #ff3b6b;
+    text-shadow: 0 0 10px rgba(255, 59, 107, 0.6);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.9)),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+}
+
+.small-title {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+    @keyframes glowText {
+        0% {
+            text-shadow: 0 0 5px #ff3b6b;
+        }
+
+        50% {
+            text-shadow: 0 0 20px #ff3b6b;
+        }
+
+        100% {
+            text-shadow: 0 0 5px #ff3b6b;
+        }
+    }
+
+    .hero h1 {
+        animation: glowText 3s infinite;
+    }
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #dddddd;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #ff3b6b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================= POPULAR ================= */
+
+.popular {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.popular h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-text {
+    color: #aaaaaa;
+    margin-bottom: 45px;
+}
+
+
+/* ================= ANIME CARDS ================= */
+
+.anime-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.anime-card {
+    width: 300px;
+    background: #17171e;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #292933;
+}
+
+.anime-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 59, 107, 0.35);
+    border-color: #ff3b6b;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #111116;
+    transition: transform 0.5s ease;
+}
+
+.anime-card:hover img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ff3b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-content button:hover {
+    opacity: 0.8;
+}
+
+
+/* ================= CHARACTERS ================= */
+.characters {
+    padding: 80px 30px;
+    text-align: center;
+    background: #111116;
+}
+
+.characters h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.characters p {
+    color: #aaaaaa;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 80px 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #aaaaaa;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111116;
+    text-align: center;
+    padding: 25px;
+    color: #888888;
+    border-top: 1px solid #292933;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .popular {
+        padding: 60px 20px;
+    }
+
+    .anime-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+/* ================= CHARACTERS CARDS ================= */
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.character-card {
+    width: 360px;
+    background: #17171e;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #292933;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 59, 107, 0.35);
+    border-color: #ff3b6b;
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #111116;
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #111116;
+    transition: transform 0.5s ease;
+}
+
+.character-card:hover img {
+    transform: scale(1.08);
+}
+
+.character-content {
+    padding: 22px;
+    text-align: left;
+}
+
+.character-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.character-content p {
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.character-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ff3b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.character-content button:hover {
+    opacity: 0.8;
+}
+
+.search-box {
+    position: relative;
+}
+
+#searchSuggestions {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 250px;
+    background: #17171e;
+    border: 1px solid #292933;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    z-index: 2000;
+    text-align: left;
+}
+
+.search-suggestion {
+    padding: 12px 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-suggestion:hover {
+    background: #292933;
+}
+
+.search-message {
+    padding: 12px 15px;
+    color: #aaaaaa;
+}
+
+/* ================= ANIME DETAILS POPUP ================= */
+.anime-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    padding: 20px;
+}
+
+.anime-popup.active {
+    display: flex;
+    animation: popupBackground 0.35s ease forwards;
+}
+
+.anime-popup-content {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    background: #17171e;
+    border: 1px solid #292933;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+}
+
+@keyframes popupBackground {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes popupOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.75) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.anime-popup-content {
+    animation: popupOpen 0.4s ease forwards;
+}
+
+.anime-popup-content>img {
+    width: 280px;
+    height: 400px;
+    object-fit: contain;
+    background: #111116;
+}
+
+.popup-info {
+    padding: 35px;
+    text-align: left;
+}
+
+.popup-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.popup-info p {
+    color: #bbbbbb;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff3b6b;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ================= CHARACTER DETAILS POPUP ================= */
+
+.character-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    padding: 20px;
+}
+
+.character-popup.active {
+    display: flex;
+}
+
+.character-popup-content {
+    position: relative;
+    width: 700px;
+    max-width: 100%;
+    background: #17171e;
+    border: 1px solid #292933;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+}
+
+.character-popup-content>img {
+    width: 280px;
+    height: 400px;
+    object-fit: contain;
+    background: #111116;
+}
+
+.character-popup-info {
+    padding: 35px;
+    text-align: left;
+}
+
+.character-popup-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.character-popup-info p {
+    color: #bbbbbb;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.close-character-popup {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff3b6b;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+// ================= FAVORITES =================
+
+function addFavorite(animeName) {
+
+    let favorites=JSON.parse(localStorage.getItem("animeFavorites")) || [];
+
+    if ( !favorites.includes(animeName)) {
+
+        favorites.push(animeName);
+
+        localStorage.setItem("animeFavorites",
+            JSON.stringify(favorites));
+
+        alert("❤️ Added to Favorites!");
+
+    }
+
+    else {
+
+        alert("⭐ Already in Favorites!");
+
+    }
+}
+
+/* ================= FAVORITES ================= */
+
+.favorites-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 6000;
+    padding: 20px;
+}
+
+.favorites-popup.active {
+    display: flex;
+}
+
+.favorites-content {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #17171e;
+    border: 1px solid #292933;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.favorites-content h2 {
+    margin-bottom: 25px;
+}
+
+.close-favorites {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff3b6b;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #111116;
+    border-radius: 12px;
+}
+
+.favorite-item img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.favorite-item h3 {
+    margin-bottom: 8px;
+}
+
+.favorite-item p {
+    color: #aaa;
+}
+
+/* ================= FAVORITE BUTTON ================= */
+
+.favorite-btn {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: 1px solid #ff3b6b;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.favorite-btn:hover {
+    background: #ff3b6b;
+    transform: scale(1.05);
+}
+
+.favorite-btn.added {
+    background: #ff3b6b;
+    transform: scale(1.05);
+}
+
+.favorite-btn.pop {
+    animation: favoritePop 0.35s ease;
+}
+
+@keyframes favoritePop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* ================= RATING SYSTEM ================= */
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.rating span {
+    font-size: 25px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rating span:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+.rating span.selected {
+    color: #ffd700;
+}
+
+.rating-text {
+    color: #999;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.favorite-item button {
+    margin-top: 8px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #ff3b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.favorite-item button:hover {
+    opacity: 0.8;
+}
+
+/* ================= FAVORITES POPUP ================= */
+
+.favorites-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 6000;
+    padding: 20px;
+}
+
+.favorites-popup.active {
+    display: flex;
+}
+
+.favorites-content {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #17171e;
+    border: 1px solid #292933;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.close-favorites {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #ff3b6b;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-favorites:hover {
+    transform: scale(1.1);
+}
+
+.anime-card.search-highlight {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 59, 107, 0.8);
+    border-color: #ff3b6b;
+}
+
+#clearSearch {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: block;
+}
+
+#clearSearch:hover {
+    color: #ff3b6b;
+}
+
+/* ================= POPUP ACTIONS ================= */
+
+.popup-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.popup-actions button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-favorite {
+    background: #ff3b6b;
+}
+
+.popup-trailer {
+    background: #33333d;
+}
+
+.popup-actions button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ================= POPUP RATING ================= */
+
+.popup-rating {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #292933;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin: 8px 0;
+}
+
+.rating-stars span {
+    font-size: 28px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rating-stars span:hover,
+.rating-stars span.selected {
+    color: #ffd43b;
+    transform: scale(1.1);
+}
+
+#popupYourRating {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* ================= THEME SYSTEM ================= */
+
+/* LIGHT MODE */
+
+body.light-mode {
+    background: #f5f5f7;
+    color: #17171e;
+}
+
+body.light-mode .navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+body.light-mode .nav-links a {
+    color: #17171e;
+}
+
+body.light-mode .logo {
+    color: #17171e;
+}
+
+body.light-mode .search-box input {
+    background: #ffffff;
+    color: #17171e;
+    border-color: #dddddd;
+}
+
+body.light-mode #searchSuggestions {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.light-mode .search-suggestion {
+    color: #17171e;
+}
+
+body.light-mode .search-suggestion:hover {
+    background: #eeeeee;
+}
+
+body.light-mode .section-text {
+    color: #666666;
+}
+
+body.light-mode .anime-card {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.light-mode .anime-card img {
+    background: #eeeeee;
+}
+
+body.light-mode .card-content p {
+    color: #666666;
+}
+
+body.light-mode .characters {
+    background: #eeeeee;
+}
+
+body.light-mode .characters p {
+    color: #666666;
+}
+
+body.light-mode .character-card {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.light-mode .character-card img {
+    background: #eeeeee;
+}
+
+body.light-mode .character-content p {
+    color: #666666;
+}
+
+body.light-mode .about p {
+    color: #666666;
+}
+
+body.light-mode footer {
+    background: #ffffff;
+    color: #666666;
+    border-top-color: #dddddd;
+}
+
+/* POPUPS */
+
+body.light-mode .anime-popup,
+body.light-mode .character-popup,
+body.light-mode .favorites-popup {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+body.light-mode .anime-popup-content,
+body.light-mode .character-popup-content,
+body.light-mode .favorites-content {
+    background: #ffffff;
+    border-color: #dddddd;
+}
+
+body.light-mode .anime-popup-content>img,
+body.light-mode .character-popup-content>img {
+    background: #eeeeee;
+}
+
+body.light-mode .popup-info p,
+body.light-mode .character-popup-info p {
+    color: #666666;
+}
+
+body.light-mode .favorite-item {
+    background: #f1f1f3;
+}
+
+body.light-mode .favorite-item p {
+    color: #666666;
+}
+
+/* FAVORITE BUTTON */
+
+body.light-mode .favorite-btn {
+    color: #17171e;
+}
+
+/* POPUP TRAILER */
+
+body.light-mode .popup-trailer {
+    background: #eeeeee;
+    color: #17171e;
+}
+
+/* RATING */
+
+body.light-mode .rating span {
+    color: #bbbbbb;
+}
+
+body.light-mode .rating-text {
+    color: #666666;
+}
+
+body.light-mode #popupYourRating {
+    color: #666666;
+}
+
+/* ================= PREMIUM THEME BUTTON ================= */
+
+.theme-toggle {
+    padding: 11px 20px;
+    border: 1px solid #ff3b6b;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #17171e, #252530);
+    color: white;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 10px rgba(255, 59, 107, 0.25);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 22px rgba(255, 59, 107, 0.7);
+    background: linear-gradient(135deg, #ff3b6b, #ff1744);
+}
+
+.theme-toggle:active {
+    transform: scale(0.92);
+}
+
+/* LIGHT MODE */
+
+body.light-mode .theme-toggle {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    color: #17171e;
+    border-color: #ff3b6b;
+}
+
+body.light-mode .theme-toggle:hover {
+    background: linear-gradient(135deg, #ff3b6b, #ff1744);
+    color: white;
+}
+
+/* ================= PAGE LOAD ANIMATION ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.popular,
+.characters,
+.about {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-content {
+    animation-delay: 0.2s;
+}
+
+.popular {
+    animation-delay: 0.5s;
+}
+
+.characters {
+    animation-delay: 0.8s;
+}
+
+.about {
+    animation-delay: 1.1s;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anime-card {
+    animation: cardReveal 0.8s ease forwards;
+}
+
+.anime-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.anime-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.anime-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* ================= PREMIUM FAVORITES BUTTON ================= */
+
+.favorites-btn {
+    padding: 11px 18px;
+    border: 1px solid #ff3b6b;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff3b6b, #ff1744);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 59, 107, 0.25);
+}
+
+.favorites-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 59, 107, 0.7);
+}
+
+.favorites-btn:active {
+    transform: scale(0.95);
+}
+
+#favoriteCount {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* ================= PREMIUM CATEGORY FILTER ================= */
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.category-filter button {
+    padding: 11px 22px;
+    border: 1px solid #ff3b6b;
+    border-radius: 25px;
+    background: rgba(255, 59, 107, 0.08);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-filter button:hover {
+    background: #ff3b6b;
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(255, 59, 107, 0.6);
+}
+
+.category-filter button:active {
+    transform: scale(0.95);
+}
+
+/* ================= ACTIVE CATEGORY BUTTON ================= */
+
+.category-filter button.active {
+    background: linear-gradient(135deg, #ff3b6b, #ff1744);
+    color: white;
+    border-color: #ff3b6b;
+    box-shadow: 0 0 20px rgba(255, 59, 107, 0.6);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ================= FAVORITE HEART ANIMATION ================= */
+
+.favorite-btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.favorite-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+.favorite-btn.added {
+    background: linear-gradient(135deg, #ff1744, #ff3b6b);
+    box-shadow: 0 0 18px rgba(255, 59, 107, 0.65);
+    animation: heartPop 0.45s ease;
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.18);
+    }
+
+    60% {
+        transform: scale(0.92);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ================= RATING STAR ANIMATION ================= */
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 12px 0 5px;
+}
+
+.rating span {
+    font-size: 22px;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.rating span:hover {
+    color: #ffd700;
+    transform: scale(1.3) rotate(-8deg);
+}
+
+.rating span.selected {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    animation: starPop 0.35s ease;
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rating-text {
+    transition: all 0.3s ease;
+}
+
+/* ================= NAVBAR FIX ================= */
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ff3b6b;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff3b6b;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Search */
+
+.search-box {
+    display: none;
+}
+
+.search-box.active {
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 80px;
+    z-index: 2000;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 11px 15px;
+    border-radius: 10px;
+    border: 1px solid #ff3b6b;
+    background: #17171e;
+    color: white;
+    outline: none;
+}
+
+/* ================= HERO BUTTON ANIMATION ================= */
+
+.hero button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0 rgba(255, 59, 107, 0);
+}
+
+/* Hover lift + glow */
+.hero button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 59, 107, 0.5);
+}
+
+/* Shine effect */
+.hero button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.45),
+            transparent);
+    transform: skewX(-20deg);
+}
+
+/* Shine movement */
+.hero button:hover::before {
+    animation: buttonShine 0.7s ease;
+}
+
+@keyframes buttonShine {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 140%;
+    }
+}
+
+/* Click effect */
+.hero button:active {
+    transform: scale(0.95);
+}
+
+/* ================= HERO CINEMATIC ZOOM ================= */
+
+.hero {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.9)),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    animation: heroZoom 12s ease-in-out infinite alternate;
+
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* ================= HERO TEXT ANIMATION ================= */
+
+.hero-content .small-title {
+    opacity: 0;
+    animation: heroTextIn 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-content h1 {
+    opacity: 0;
+    animation: heroTextIn 0.9s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.hero-content>p:not(.small-title) {
+    opacity: 0;
+    animation: heroTextIn 0.9s ease forwards;
+    animation-delay: 0.9s;
+}
+
+.hero-content button {
+    opacity: 0;
+    animation: heroTextIn 0.9s ease forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes heroTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= NEON CARD ANIMATION ================= */
+
+.anime-card {
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.anime-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 17px;
+    background: linear-gradient(90deg,
+            transparent,
+            #ff3b6b,
+            transparent,
+            #ff3b6b,
+            transparent);
+    background-size: 300% 100%;
+    opacity: 0;
+    z-index: -1;
+    animation: neonMove 3s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+.anime-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes neonMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+.anime-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 59, 107, 0.45);
+}
+
+/* ================= CHARACTER NEON ANIMATION ================= */
+
+.character-card {
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.character-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 17px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #ff3b6b,
+            transparent,
+            #ff3b6b,
+            transparent);
+
+    background-size: 300% 100%;
+    opacity: 0;
+    z-index: -1;
+
+    animation: characterNeon 3s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+.character-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes characterNeon {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+.character-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 59, 107, 0.45);
+}
+
+/* ================= CHARACTER REVEAL ================= */
+
+.character-card {
+    opacity: 0;
+    animation: characterReveal 0.8s ease forwards;
+}
+
+.character-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.character-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.character-card:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+@keyframes characterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.more-anime {
+    display: none;
+}
+
+.more-options-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#moreOptionsBtn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #ff3b6b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#moreOptionsBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 59, 107, 0.35);
+}
+
+/* ================= FULL RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 450px;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    /* Search */
+    .search-container {
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
+    }
+
+    /* Anime cards */
+    .anime-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .anime-card {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    /* More options */
+    .more-options-container {
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    #moreOptionsBtn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Categories */
+    .category-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    /* Characters */
+    .character-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .character-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Popups */
+    .anime-popup-content,
+    .character-popup-content {
+        width: 90%;
+        max-width: 400px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+        font-size: 13px;
+    }
+}
+
+/* ================= MOBILE NAVBAR FIX ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        height: auto;
+        min-height: 70px;
+        padding: 15px 10px;
+    }
+
+}
+
+/* ================= MOBILE CHARACTER POPUP ================= */
+
+@media (max-width: 768px) {
+
+    .character-popup {
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .character-popup-content {
+        width: 100%;
+        max-width: 350px;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .character-popup-content>img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .character-popup-info {
+        padding: 20px;
+        width: auto;
+    }
+
+    .character-popup-info h2 {
+        font-size: 26px;
+    }
+
+    .character-popup-info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}
+
+/* ================= MOBILE ANIME POPUP ================= */
+
+@media (max-width: 768px) {
+
+    .anime-popup {
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .anime-popup-content {
+        width: 100%;
+        max-width: 350px;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .anime-popup-content>img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .popup-info {
+        padding: 20px;
+        width: auto;
+    }
+
+    .popup-info h2 {
+        font-size: 25px;
+    }
+
+    .popup-info p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}

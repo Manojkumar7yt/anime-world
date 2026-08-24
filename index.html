@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎌 ANIME WORLD
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#anime">Anime</a>
+            <a href="#characters">Characters</a>
+            <a href="#about">About</a>
+
+            <button class="favorites-btn" onclick="showFavorites()">
+                ❤️ Favorites
+                <span id="favoriteCount">0</span> </button>
+
+            <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
+                ☀️ Light
+            </button>
+        </div>
+
+        <div class="search-box" id="searchBox">
+
+            <input type="text" id="animeSearch" placeholder="Search anime..." autocomplete="off">
+
+            <button type="button" id="clearSearch" onclick="clearAnimeSearch()">
+                ×
+            </button>
+
+            <div id="searchSuggestions"></div>
+        </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>ANIME WORLD</h1>
+
+            <p>
+                Discover your favourite anime,
+                legendary characters and epic stories.
+            </p>
+
+            <button onclick="openSearch()">Explore Anime</button>
+
+        </div>
+
+    </section>
+
+    <!-- Popular Anime -->
+    <section class="popular" id="anime">
+
+        <h2>🔥 POPULAR ANIME</h2>
+
+        <div class="category-filter">
+
+            <button onclick="filterAnime('all')">All</button>
+            <button onclick="filterAnime('action')">Action</button>
+            <button onclick="filterAnime('adventure')">Adventure</button>
+            <button onclick="filterAnime('drama')">Drama</button>
+
+        </div>
+
+        <p class="section-text">
+            Explore some of the most popular anime series.
+        </p>
+
+        <div class="anime-container">
+
+            <!-- Naruto -->
+            <div class="anime-card" data-category="action adventure">
+
+                <img src="images/naruto.jpg" alt="Naruto">
+
+                <div class="card-content">
+
+                    <h3>Naruto</h3>
+
+                    <p>
+                        Follow Naruto Uzumaki on his journey
+                        to become the strongest ninja.
+                    </p>
+
+                    <button onclick="showAnimeDetails('naruto')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('naruto', this)">
+                        ♡ Favorite </button>
+
+                    <div class="rating" data-anime="naruto">
+
+                        <span onclick="rateAnime('naruto', 1)">★</span>
+                        <span onclick="rateAnime('naruto', 2)">★</span>
+                        <span onclick="rateAnime('naruto', 3)">★</span>
+                        <span onclick="rateAnime('naruto', 4)">★</span>
+                        <span onclick="rateAnime('naruto', 5)">★</span>
+
+                    </div>
+
+                    <p class="rating-text" id="rating-naruto">
+                        Rate this anime </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- One Piece -->
+            <div class="anime-card" data-category="action adventure">
+
+                <img src="images/onepiece.jpg" alt="One Piece">
+
+                <div class="card-content">
+
+                    <h3>One Piece</h3>
+
+                    <p>
+                        Join Luffy and his crew on their
+                        journey to find the legendary treasure.
+                    </p>
+
+                    <button onclick="showAnimeDetails('onepiece')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('onepiece', this)">
+                        ♡ Favorite </button>
+
+                    <div class="rating" data-anime="onepiece">
+
+                        <span onclick="rateAnime('onepiece', 1)">★</span>
+                        <span onclick="rateAnime('onepiece', 2)">★</span>
+                        <span onclick="rateAnime('onepiece', 3)">★</span>
+                        <span onclick="rateAnime('onepiece', 4)">★</span>
+                        <span onclick="rateAnime('onepiece', 5)">★</span>
+
+                    </div>
+
+                    <p class="rating-text" id="rating-onepiece">
+                        Rate this anime </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tokyo Revengers -->
+            <div class="anime-card" data-category="action drama">
+
+                <img src="images/tokyo.jpg" alt="Tokyo Revengers">
+
+                <div class="card-content">
+
+                    <h3>Tokyo Revengers</h3>
+
+                    <p>
+                        Takemichi travels through time to
+                        change the future of his friends.
+                    </p>
+
+                    <button onclick="showAnimeDetails('tokyo')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('tokyo', this)">
+                        ♡ Favorite </button>
+
+                    <div class="rating" data-anime="tokyo">
+
+                        <span onclick="rateAnime('tokyo', 1)">★</span>
+                        <span onclick="rateAnime('tokyo', 2)">★</span>
+                        <span onclick="rateAnime('tokyo', 3)">★</span>
+                        <span onclick="rateAnime('tokyo', 4)">★</span>
+                        <span onclick="rateAnime('tokyo', 5)">★</span>
+
+                    </div>
+
+                    <p class="rating-text" id="rating-tokyo">
+                        Rate this anime </p>
+
+                </div>
+            </div>
+
+            <!-- Your Name -->
+            <div class="anime-card more-anime" data-category="drama">
+
+                <img src="images/your-name.jpg" alt="Your Name">
+
+                <div class="card-content">
+
+                    <h3>Your Name</h3>
+
+                    <p>
+                        Two strangers connected by a mysterious
+                        body-swapping phenomenon.
+                    </p>
+
+                    <button onclick="showAnimeDetails('your-name')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('your-name', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="your-name">
+                        <span onclick="rateAnime('your-name', 1)">★</span>
+                        <span onclick="rateAnime('your-name', 2)">★</span>
+                        <span onclick="rateAnime('your-name', 3)">★</span>
+                        <span onclick="rateAnime('your-name', 4)">★</span>
+                        <span onclick="rateAnime('your-name', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-your-name">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Weathering With You -->
+            <div class="anime-card more-anime" data-category="drama">
+
+                <img src="images/weathering-with-you.jpg" alt="Weathering With You">
+
+                <div class="card-content">
+
+                    <h3>Weathering With You</h3>
+
+                    <p>
+                        A young boy meets a girl with the mysterious
+                        ability to control the weather.
+                    </p>
+
+                    <button onclick="showAnimeDetails('weathering-with-you')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('weathering-with-you', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="weathering-with-you">
+                        <span onclick="rateAnime('weathering-with-you', 1)">★</span>
+                        <span onclick="rateAnime('weathering-with-you', 2)">★</span>
+                        <span onclick="rateAnime('weathering-with-you', 3)">★</span>
+                        <span onclick="rateAnime('weathering-with-you', 4)">★</span>
+                        <span onclick="rateAnime('weathering-with-you', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-weathering-with-you">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Demon Slayer -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/demon-slayer.jpg" alt="Demon Slayer">
+
+                <div class="card-content">
+
+                    <h3>Demon Slayer</h3>
+
+                    <p>
+                        Tanjiro begins a dangerous journey to save
+                        his sister and defeat demons.
+                    </p>
+
+                    <button onclick="showAnimeDetails('demon-slayer')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('demon-slayer', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="demon-slayer">
+                        <span onclick="rateAnime('demon-slayer', 1)">★</span>
+                        <span onclick="rateAnime('demon-slayer', 2)">★</span>
+                        <span onclick="rateAnime('demon-slayer', 3)">★</span>
+                        <span onclick="rateAnime('demon-slayer', 4)">★</span>
+                        <span onclick="rateAnime('demon-slayer', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-demon-slayer">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Jujutsu Kaisen -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen">
+
+                <div class="card-content">
+
+                    <h3>Jujutsu Kaisen</h3>
+
+                    <p>
+                        Yuji Itadori enters the world of cursed spirits
+                        and powerful sorcerers.
+                    </p>
+
+                    <button onclick="showAnimeDetails('jujutsu-kaisen')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('jujutsu-kaisen', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="jujutsu-kaisen">
+                        <span onclick="rateAnime('jujutsu-kaisen', 1)">★</span>
+                        <span onclick="rateAnime('jujutsu-kaisen', 2)">★</span>
+                        <span onclick="rateAnime('jujutsu-kaisen', 3)">★</span>
+                        <span onclick="rateAnime('jujutsu-kaisen', 4)">★</span>
+                        <span onclick="rateAnime('jujutsu-kaisen', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-jujutsu-kaisen">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Attack on Titan -->
+            <div class="anime-card more-anime" data-category="action drama">
+
+                <img src="images/attack-on-titan.jpg" alt="Attack on Titan">
+
+                <div class="card-content">
+
+                    <h3>Attack on Titan</h3>
+
+                    <p>
+                        Humanity fights for survival against mysterious
+                        giant Titans.
+                    </p>
+
+                    <button onclick="showAnimeDetails('attack-on-titan')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('attack-on-titan', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="attack-on-titan">
+                        <span onclick="rateAnime('attack-on-titan', 1)">★</span>
+                        <span onclick="rateAnime('attack-on-titan', 2)">★</span>
+                        <span onclick="rateAnime('attack-on-titan', 3)">★</span>
+                        <span onclick="rateAnime('attack-on-titan', 4)">★</span>
+                        <span onclick="rateAnime('attack-on-titan', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-attack-on-titan">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Death Note -->
+            <div class="anime-card more-anime" data-category="drama">
+
+                <img src="images/death-note.jpg" alt="Death Note">
+
+                <div class="card-content">
+
+                    <h3>Death Note</h3>
+
+                    <p>
+                        A mysterious notebook gives its owner the power
+                        to determine someone's fate.
+                    </p>
+
+                    <button onclick="showAnimeDetails('death-note')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('death-note', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="death-note">
+                        <span onclick="rateAnime('death-note', 1)">★</span>
+                        <span onclick="rateAnime('death-note', 2)">★</span>
+                        <span onclick="rateAnime('death-note', 3)">★</span>
+                        <span onclick="rateAnime('death-note', 4)">★</span>
+                        <span onclick="rateAnime('death-note', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-death-note">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Bleach -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/bleach.jpg" alt="Bleach">
+
+                <div class="card-content">
+
+                    <h3>Bleach</h3>
+
+                    <p>
+                        Ichigo Kurosaki gains supernatural powers and
+                        becomes a Soul Reaper.
+                    </p>
+
+                    <button onclick="showAnimeDetails('bleach')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('bleach', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="bleach">
+                        <span onclick="rateAnime('bleach', 1)">★</span>
+                        <span onclick="rateAnime('bleach', 2)">★</span>
+                        <span onclick="rateAnime('bleach', 3)">★</span>
+                        <span onclick="rateAnime('bleach', 4)">★</span>
+                        <span onclick="rateAnime('bleach', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-bleach">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- One Punch Man -->
+            <div class="anime-card more-anime" data-category="action">
+
+                <img src="images/one-punch-man.jpg" alt="One Punch Man">
+
+                <div class="card-content">
+
+                    <h3>One Punch Man</h3>
+
+                    <p>
+                        Saitama becomes an unbelievably powerful hero
+                        who defeats enemies with one punch.
+                    </p>
+
+                    <button onclick="showAnimeDetails('one-punch-man')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('one-punch-man', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="one-punch-man">
+                        <span onclick="rateAnime('one-punch-man', 1)">★</span>
+                        <span onclick="rateAnime('one-punch-man', 2)">★</span>
+                        <span onclick="rateAnime('one-punch-man', 3)">★</span>
+                        <span onclick="rateAnime('one-punch-man', 4)">★</span>
+                        <span onclick="rateAnime('one-punch-man', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-one-punch-man">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- My Hero Academia -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/my-hero-academia.jpg" alt="My Hero Academia">
+
+                <div class="card-content">
+
+                    <h3>My Hero Academia</h3>
+
+                    <p>
+                        Izuku Midoriya dreams of becoming a great hero
+                        in a world full of superpowers.
+                    </p>
+
+                    <button onclick="showAnimeDetails('my-hero-academia')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('my-hero-academia', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="my-hero-academia">
+                        <span onclick="rateAnime('my-hero-academia', 1)">★</span>
+                        <span onclick="rateAnime('my-hero-academia', 2)">★</span>
+                        <span onclick="rateAnime('my-hero-academia', 3)">★</span>
+                        <span onclick="rateAnime('my-hero-academia', 4)">★</span>
+                        <span onclick="rateAnime('my-hero-academia', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-my-hero-academia">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Hunter x Hunter -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/hunter-x-hunter.jpg" alt="Hunter x Hunter">
+
+                <div class="card-content">
+
+                    <h3>Hunter × Hunter</h3>
+
+                    <p>
+                        Gon begins an adventure to become a Hunter and
+                        find his missing father.
+                    </p>
+
+                    <button onclick="showAnimeDetails('hunter-x-hunter')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('hunter-x-hunter', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="hunter-x-hunter">
+                        <span onclick="rateAnime('hunter-x-hunter', 1)">★</span>
+                        <span onclick="rateAnime('hunter-x-hunter', 2)">★</span>
+                        <span onclick="rateAnime('hunter-x-hunter', 3)">★</span>
+                        <span onclick="rateAnime('hunter-x-hunter', 4)">★</span>
+                        <span onclick="rateAnime('hunter-x-hunter', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-hunter-x-hunter">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Dragon Ball -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/dragon-ball.jpg" alt="Dragon Ball">
+
+                <div class="card-content">
+
+                    <h3>Dragon Ball</h3>
+
+                    <p>
+                        Goku's journey begins with martial arts,
+                        friendship and legendary battles.
+                    </p>
+
+                    <button onclick="showAnimeDetails('dragon-ball')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('dragon-ball', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="dragon-ball">
+                        <span onclick="rateAnime('dragon-ball', 1)">★</span>
+                        <span onclick="rateAnime('dragon-ball', 2)">★</span>
+                        <span onclick="rateAnime('dragon-ball', 3)">★</span>
+                        <span onclick="rateAnime('dragon-ball', 4)">★</span>
+                        <span onclick="rateAnime('dragon-ball', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-dragon-ball">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Black Clover -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/black-clover.jpg" alt="Black Clover">
+
+                <div class="card-content">
+
+                    <h3>Black Clover</h3>
+
+                    <p>
+                        Asta works hard to become the Wizard King
+                        despite having no magic.
+                    </p>
+
+                    <button onclick="showAnimeDetails('black-clover')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('black-clover', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="black-clover">
+                        <span onclick="rateAnime('black-clover', 1)">★</span>
+                        <span onclick="rateAnime('black-clover', 2)">★</span>
+                        <span onclick="rateAnime('black-clover', 3)">★</span>
+                        <span onclick="rateAnime('black-clover', 4)">★</span>
+                        <span onclick="rateAnime('black-clover', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-black-clover">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Haikyu -->
+            <div class="anime-card more-anime" data-category="drama adventure">
+
+                <img src="images/haikyu.jpg" alt="Haikyu">
+
+                <div class="card-content">
+
+                    <h3>Haikyu!!</h3>
+
+                    <p>
+                        Hinata pursues his dream of becoming a great
+                        volleyball player.
+                    </p>
+
+                    <button onclick="showAnimeDetails('haikyu')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('haikyu', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="haikyu">
+                        <span onclick="rateAnime('haikyu', 1)">★</span>
+                        <span onclick="rateAnime('haikyu', 2)">★</span>
+                        <span onclick="rateAnime('haikyu', 3)">★</span>
+                        <span onclick="rateAnime('haikyu', 4)">★</span>
+                        <span onclick="rateAnime('haikyu', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-haikyu">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Chainsaw Man -->
+            <div class="anime-card more-anime" data-category="action">
+
+                <img src="images/chainsaw-man.jpg" alt="Chainsaw Man">
+
+                <div class="card-content">
+
+                    <h3>Chainsaw Man</h3>
+
+                    <p>
+                        Denji's life changes when he becomes a powerful
+                        devil hunter.
+                    </p>
+
+                    <button onclick="showAnimeDetails('chainsaw-man')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('chainsaw-man', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="chainsaw-man">
+                        <span onclick="rateAnime('chainsaw-man', 1)">★</span>
+                        <span onclick="rateAnime('chainsaw-man', 2)">★</span>
+                        <span onclick="rateAnime('chainsaw-man', 3)">★</span>
+                        <span onclick="rateAnime('chainsaw-man', 4)">★</span>
+                        <span onclick="rateAnime('chainsaw-man', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-chainsaw-man">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Solo Leveling -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/solo-leveling.jpg" alt="Solo Leveling">
+
+                <div class="card-content">
+
+                    <h3>Solo Leveling</h3>
+
+                    <p>
+                        Sung Jin-Woo grows from the weakest hunter into
+                        a powerful force.
+                    </p>
+
+                    <button onclick="showAnimeDetails('solo-leveling')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('solo-leveling', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="solo-leveling">
+                        <span onclick="rateAnime('solo-leveling', 1)">★</span>
+                        <span onclick="rateAnime('solo-leveling', 2)">★</span>
+                        <span onclick="rateAnime('solo-leveling', 3)">★</span>
+                        <span onclick="rateAnime('solo-leveling', 4)">★</span>
+                        <span onclick="rateAnime('solo-leveling', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-solo-leveling">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Sword Art Online -->
+            <div class="anime-card more-anime" data-category="action adventure">
+
+                <img src="images/sword-art-online.jpg" alt="Sword Art Online">
+
+                <div class="card-content">
+
+                    <h3>Sword Art Online</h3>
+
+                    <p>
+                        Players become trapped inside a virtual reality
+                        game where survival means reaching the end.
+                    </p>
+
+                    <button onclick="showAnimeDetails('sword-art-online')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('sword-art-online', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="sword-art-online">
+                        <span onclick="rateAnime('sword-art-online', 1)">★</span>
+                        <span onclick="rateAnime('sword-art-online', 2)">★</span>
+                        <span onclick="rateAnime('sword-art-online', 3)">★</span>
+                        <span onclick="rateAnime('sword-art-online', 4)">★</span>
+                        <span onclick="rateAnime('sword-art-online', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-sword-art-online">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- A Silent Voice -->
+            <div class="anime-card more-anime " data-category="drama">
+
+                <img src="images/a-silent-voice.jpg" alt="A Silent Voice">
+
+                <div class="card-content">
+
+                    <h3>A Silent Voice</h3>
+
+                    <p>
+                        A moving story about friendship, forgiveness
+                        and finding a way forward.
+                    </p>
+
+                    <button onclick="showAnimeDetails('a-silent-voice')">
+                        View More
+                    </button>
+
+                    <button class="favorite-btn" onclick="addFavorite('a-silent-voice', this)">
+                        ♡ Favorite
+                    </button>
+
+                    <div class="rating" data-anime="a-silent-voice">
+                        <span onclick="rateAnime('a-silent-voice', 1)">★</span>
+                        <span onclick="rateAnime('a-silent-voice', 2)">★</span>
+                        <span onclick="rateAnime('a-silent-voice', 3)">★</span>
+                        <span onclick="rateAnime('a-silent-voice', 4)">★</span>
+                        <span onclick="rateAnime('a-silent-voice', 5)">★</span>
+                    </div>
+
+                    <p class="rating-text" id="rating-a-silent-voice">
+                        Rate this anime
+                    </p>
+
+                </div>
+            </div>
+            <!-- MORE OPTIONS BUTTON -->
+            <div class="more-options-container">
+                <button id="moreOptionsBtn" onclick="toggleMoreAnime()">
+                    More Options
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Characters Section -->
+    <section class="characters" id="characters">
+
+        <h2>⚡ POPULAR CHARACTERS</h2>
+
+        <p class="section-text">
+            Meet some unforgettable anime characters.
+        </p>
+
+        <div class="character-container">
+
+            <!-- Naruto -->
+            <div class="character-card">
+
+                <img src="images/naruto-character.jpg" alt="Naruto">
+
+                <div class="character-content">
+                    <h3>Naruto Uzumaki</h3>
+
+                    <p>
+                        A brave ninja who dreams of becoming
+                        the strongest Hokage.
+                    </p>
+
+                    <button onclick="showCharacterDetails('naruto')">View Character</button>
+                </div>
+
+            </div>
+
+
+            <!-- Luffy -->
+            <div class="character-card">
+
+                <img src="images/luffy.jpg" alt="Luffy">
+
+                <div class="character-content">
+                    <h3>Monkey D. Luffy</h3>
+
+                    <p>
+                        A fearless pirate who dreams of
+                        becoming the Pirate King.
+                    </p>
+
+                    <button onclick="showCharacterDetails('luffy')">View Character</button>
+                </div>
+
+            </div>
+
+
+            <!-- Mikey -->
+            <div class="character-card">
+
+                <img src="images/mikey.jpg" alt="Mikey">
+
+                <div class="character-content">
+                    <h3>Mikey</h3>
+
+                    <p>
+                        One of the strongest and most respected
+                        members of Tokyo Manji Gang.
+                    </p>
+
+                    <button onclick="showCharacterDetails('mikey')">View Character</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>🎌 ABOUT ANIME WORLD</h2>
+
+        <p>
+            Anime World is a simple website created for
+            anime lovers to discover popular anime,
+            characters and amazing stories.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Anime World | Made with ❤️ for Anime Fans
+        </p>
+
+    </footer>
+
+    <!-- Anime Details Popup -->
+    <div class="anime-popup" id="animePopup">
+
+        <div class="anime-popup-content">
+
+            <button class="close-popup" onclick="closeAnimeDetails()">
+                ×
+            </button>
+
+            <img id="popupImage" src="" alt="Anime">
+
+            <div class="popup-info">
+
+                <h2 id="popupTitle"></h2>
+
+                <p id="popupRating"></p>
+
+                <p id="popupGenre"></p>
+
+                <p id="popupEpisodes"></p>
+
+                <p id="popupDescription"></p>
+
+                <!-- Action Buttons -->
+                <div class="popup-actions">
+
+                    <button id="popupFavoriteBtn" class="popup-favorite" onclick="togglePopupFavorite()">
+                        ❤️ Add to Favorites
+                    </button>
+
+                    <button id="popupTrailerBtn" class="popup-trailer" onclick="watchTrailer()">
+                        ▶ Watch Trailer
+                    </button>
+
+                </div>
+
+                <!-- Rating -->
+                <div class="popup-rating">
+
+                    <p>⭐ Rate this Anime</p>
+
+                    <div class="rating-stars" id="popupStars">
+
+                        <span onclick="ratePopupAnime(1)">★</span>
+                        <span onclick="ratePopupAnime(2)">★</span>
+                        <span onclick="ratePopupAnime(3)">★</span>
+                        <span onclick="ratePopupAnime(4)">★</span>
+                        <span onclick="ratePopupAnime(5)">★</span>
+
+                    </div>
+
+                    <p id="popupYourRating">
+                        Your Rating: 0/5 ⭐
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Character Details Popup -->
+
+    <div class="character-popup" id="characterPopup">
+
+        <div class="character-popup-content">
+
+            <button class="close-character-popup" onclick="closeCharacterDetails()">×</button>
+
+            <img id="characterPopupImage" src="" alt="Character">
+
+            <div class="character-popup-info">
+
+                <h2 id="characterPopupName"></h2>
+
+                <p id="characterPopupRole"></p>
+
+                <p id="characterPopupAnime"></p>
+
+                <p id="characterPopupDescription"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Favorites Popup -->
+
+    <div class="favorites-popup" id="favoritesPopup">
+
+        <div class="favorites-content">
+
+            <button class="close-favorites" onclick="closeFavorites()">×</button>
+
+            <h2>❤️ My Favorites</h2>
+
+            <div id="favoritesList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
