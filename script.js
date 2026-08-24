@@ -68,7 +68,7 @@ const animeDetails = {
 
     "naruto": {
         title: "Naruto",
-        image: "images/naruto.jpg",
+        image: "naruto.jpg",
         rating: "⭐ Rating: 8.4 / 10",
         genre: "🎭 Genre: Action, Adventure",
         episodes: "📺 Episodes: 220",
@@ -77,7 +77,7 @@ const animeDetails = {
 
     "onepiece": {
         title: "One Piece",
-        image: "images/onepiece.jpg",
+        image: "onepiece.jpg",
         rating: "⭐ Rating: 9.0 / 10",
         genre: "🎭 Genre: Action, Adventure",
         episodes: "📺 Episodes: 1100+",
@@ -86,7 +86,7 @@ const animeDetails = {
 
     "tokyo": {
         title: "Tokyo Revengers",
-        image: "images/tokyo.jpg",
+        image: "tokyo.jpg",
         rating: "⭐ Rating: 8.0 / 10",
         genre: "🎭 Genre: Action, Drama, Time Travel",
         episodes: "📺 Episodes: 50+",
@@ -95,7 +95,7 @@ const animeDetails = {
 
     "your-name": {
         title: "Your Name",
-        image: "images/your-name.jpg",
+        image: "your-name.jpg",
         rating: "⭐ Rating: 8.8 / 10",
         genre: "🎭 Genre: Romance, Fantasy, Drama",
         episodes: "🎬 Movie",
@@ -104,7 +104,7 @@ const animeDetails = {
 
     "weathering-with-you": {
         title: "Weathering With You",
-        image: "images/weathering-with-you.jpg",
+        image: "weathering-with-you.jpg",
         rating: "⭐ Rating: 8.0 / 10",
         genre: "🎭 Genre: Romance, Fantasy, Drama",
         episodes: "🎬 Movie",
@@ -113,7 +113,7 @@ const animeDetails = {
 
     "demon-slayer": {
         title: "Demon Slayer",
-        image: "images/demon-slayer.jpg",
+        image: "demon-slayer.jpg",
         rating: "⭐ Rating: 8.6 / 10",
         genre: "🎭 Genre: Action, Adventure, Fantasy",
         episodes: "📺 Episodes: 60+",
@@ -122,7 +122,7 @@ const animeDetails = {
 
     "jujutsu-kaisen": {
         title: "Jujutsu Kaisen",
-        image: "images/jujutsu-kaisen.jpg",
+        image: "jujutsu-kaisen.jpg",
         rating: "⭐ Rating: 8.5 / 10",
         genre: "🎭 Genre: Action, Supernatural",
         episodes: "📺 Episodes: 50+",
@@ -131,7 +131,7 @@ const animeDetails = {
 
     "attack-on-titan": {
         title: "Attack on Titan",
-        image: "images/attack-on-titan.jpg",
+        image: "attack-on-titan.jpg",
         rating: "⭐ Rating: 9.0 / 10",
         genre: "🎭 Genre: Action, Drama, Dark Fantasy",
         episodes: "📺 Episodes: 90+",
@@ -140,7 +140,7 @@ const animeDetails = {
 
     "death-note": {
         title: "Death Note",
-        image: "images/death-note.jpg",
+        image: "death-note.jpg",
         rating: "⭐ Rating: 8.9 / 10",
         genre: "🎭 Genre: Psychological, Thriller, Mystery",
         episodes: "📺 Episodes: 37",
@@ -149,7 +149,7 @@ const animeDetails = {
 
     "bleach": {
         title: "Bleach",
-        image: "images/bleach.jpg",
+        image: "bleach.jpg",
         rating: "⭐ Rating: 8.2 / 10",
         genre: "🎭 Genre: Action, Adventure, Supernatural",
         episodes: "📺 Episodes: 300+",
@@ -158,7 +158,7 @@ const animeDetails = {
 
     "one-punch-man": {
         title: "One Punch Man",
-        image: "images/one-punch-man.jpg",
+        image: "one-punch-man.jpg",
         rating: "⭐ Rating: 8.7 / 10",
         genre: "🎭 Genre: Action, Comedy, Superhero",
         episodes: "📺 Episodes: 24+",
@@ -167,7 +167,7 @@ const animeDetails = {
 
     "my-hero-academia": {
         title: "My Hero Academia",
-        image: "images/my-hero-academia.jpg",
+        image: "my-hero-academia.jpg",
         rating: "⭐ Rating: 8.0 / 10",
         genre: "🎭 Genre: Action, Superhero, Adventure",
         episodes: "📺 Episodes: 150+",
@@ -176,7 +176,7 @@ const animeDetails = {
 
     "hunter-x-hunter": {
         title: "Hunter × Hunter",
-        image: "images/hunter-x-hunter.jpg",
+        image: "hunter-x-hunter.jpg",
         rating: "⭐ Rating: 9.0 / 10",
         genre: "🎭 Genre: Action, Adventure, Fantasy",
         episodes: "📺 Episodes: 148",
@@ -185,7 +185,7 @@ const animeDetails = {
 
     "dragon-ball": {
         title: "Dragon Ball",
-        image: "images/dragon-ball.jpg",
+        image: "dragon-ball.jpg",
         rating: "⭐ Rating: 8.5 / 10",
         genre: "🎭 Genre: Action, Adventure, Martial Arts",
         episodes: "📺 Episodes: 153",
@@ -194,7 +194,7 @@ const animeDetails = {
 
     "black-clover": {
         title: "Black Clover",
-        image: "images/black-clover.jpg",
+        image: "black-clover.jpg",
         rating: "⭐ Rating: 8.3 / 10",
         genre: "🎭 Genre: Action, Fantasy, Magic",
         episodes: "📺 Episodes: 170",
@@ -203,7 +203,7 @@ const animeDetails = {
 
     "haikyu": {
         title: "Haikyu!!",
-        image: "images/haikyu.jpg",
+        image: "haikyu.jpg",
         rating: "⭐ Rating: 8.7 / 10",
         genre: "🎭 Genre: Sports, Drama, Comedy",
         episodes: "📺 Episodes: 85+",
@@ -212,7 +212,7 @@ const animeDetails = {
 
     "chainsaw-man": {
         title: "Chainsaw Man",
-        image: "images/chainsaw-man.jpg",
+        image: "chainsaw-man.jpg",
         rating: "⭐ Rating: 8.4 / 10",
         genre: "🎭 Genre: Action, Supernatural, Dark Fantasy",
         episodes: "📺 Episodes: 12+",
@@ -221,7 +221,7 @@ const animeDetails = {
 
     "solo-leveling": {
         title: "Solo Leveling",
-        image: "images/solo-leveling.jpg",
+        image: "solo-leveling.jpg",
         rating: "⭐ Rating: 8.8 / 10",
         genre: "🎭 Genre: Action, Fantasy, Adventure",
         episodes: "📺 Episodes: 25+",
@@ -230,7 +230,7 @@ const animeDetails = {
 
     "sword-art-online": {
         title: "Sword Art Online",
-        image: "images/sword-art-online.jpg",
+        image: "sword-art-online.jpg",
         rating: "⭐ Rating: 7.5 / 10",
         genre: "🎭 Genre: Action, Fantasy, Adventure",
         episodes: "📺 Episodes: 90+",
@@ -239,7 +239,7 @@ const animeDetails = {
 
     "a-silent-voice": {
         title: "A Silent Voice",
-        image: "images/a-silent-voice.jpg",
+        image: "a-silent-voice.jpg",
         rating: "⭐ Rating: 8.9 / 10",
         genre: "🎭 Genre: Drama, School, Coming of Age",
         episodes: "🎬 Movie",
@@ -895,7 +895,7 @@ const characterDetails = {
         name: "Naruto Uzumaki",
 
         image:
-            "images/naruto-character.jpg",
+            "naruto-character.jpg",
 
         role:
             "⚡ Role: Ninja / Hokage",
@@ -913,7 +913,7 @@ const characterDetails = {
         name: "Monkey D. Luffy",
 
         image:
-            "images/luffy.jpg",
+            "luffy.jpg",
 
         role:
             "🏴‍☠️ Role: Pirate Captain",
@@ -931,7 +931,7 @@ const characterDetails = {
         name: "Mikey",
 
         image:
-            "images/mikey.jpg",
+            "mikey.jpg",
 
         role:
             "⚡ Role: Gang Leader",
